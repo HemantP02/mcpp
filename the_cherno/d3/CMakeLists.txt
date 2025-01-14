@@ -8,12 +8,15 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Set the output directory for the build files
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
-set(CMAKE_OBJECT_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/obj)
+# set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+# set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+# set(CMAKE_OBJECT_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/obj)
 
 # Add include directories
 include_directories(include)
 
 # Add the executable
-add_executable(d3 src/functions.cpp)
+add_executable(d3.1 src/functions.cpp)
+add_executable(d3.2 src/header.cpp src/Log.cpp)
+# add_executable(d3.3 src/Log.cpp) don't do this as header and log files are connected
+
